@@ -14,6 +14,109 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
+.container {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.logo {
+    width: 30px;
+    height: auto;
+}
+
+header {
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 18px;
+    padding-left: 0.2rem;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.description {
+    font-size: 14px;
+    padding: 1rem 0;
+}
+  
+.content {
+    margin: 3rem;
+}
+
+.your-account h4 {
+    padding-bottom: 1rem;
+}
+  
+.header {
+    background-color: var(--yellow);
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.field-box {
+    background-color: var(--mid-grey);
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.form-content label {
+    display: block;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.requirement {
+    font-size: 12px;
+}
+
+.all-about-you {
+    margin-bottom: 3rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    color: white;
+    background-color: var(--grey-blue);
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
 
 
 /* ON YOUR OWN
@@ -25,3 +128,32 @@ body {
     3. have a drop-shadow on the text
 
 */
+
+
+@media (min-width: 768px) {
+    .container {
+      flex-direction: row; /* Side-by-side layout on larger screens */
+    }
+  
+    .content {
+      margin: 3rem;
+    }
+  }
+  
+  @media (min-width: 320px) and (max-width: 999px) {
+    .hero {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .hero img {
+      content: url('../img/work-at-home-with-pets.webp'); 
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .hero img {
+      content: url('../img/work-at-home.webp'); 
+    }
+  }
