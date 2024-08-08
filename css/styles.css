@@ -184,6 +184,6 @@ button:hover {
 
 @media (min-width: 1000px) {
     .hero img {
-        content: url('../img/work-at-home.webp'); 
+        content: url('../img/work-at-home-reduced.webp'); 
     }
 }
