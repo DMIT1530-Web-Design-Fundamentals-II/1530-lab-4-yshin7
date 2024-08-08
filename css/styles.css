@@ -20,15 +20,19 @@ body {
     margin: 0 auto;
 }
 
+.content {
+    margin: 1rem;
+  }
+
 .hero {
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: 100vh;
+    position: relative;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -39,7 +43,7 @@ body {
 
 header {
     display: flex;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 h1 {
@@ -55,13 +59,9 @@ h2 {
     font-size: 14px;
     padding: 1rem 0;
 }
-  
-.content {
-    margin: 3rem;
-}
 
 .your-account h4 {
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
   
 .header {
@@ -97,8 +97,12 @@ h2 {
     font-size: 12px;
 }
 
+.all-about-you h4 {
+    padding: 0.5rem 0;
+}
+
 .all-about-you {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 button {
@@ -110,6 +114,10 @@ button {
     border: 0;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--grey-blue-hover);
 }
 
 .footer {
@@ -129,31 +137,53 @@ button {
 
 */
 
+@media screen and (max-width: 600px) {
 
-@media (min-width: 768px) {
+    .form-fields {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+}
+
+  
+@media (min-width: 320px) and (max-width: 999px) {
+
     .container {
-      flex-direction: row; /* Side-by-side layout on larger screens */
+        display: block;
+        max-width: 999px;
+        margin: 0 auto;
     }
-  
-    .content {
-      margin: 3rem;
+
+    body {
+        background-color: white;
     }
-  }
-  
-  @media (min-width: 320px) and (max-width: 999px) {
-    .hero {
+
+    header {
+        display: flex;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        color: var(--white);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+
+    .hero img {
+        content: url('../img/work-at-home-with-pets.webp');
         width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        max-height: 500px; /* Set a maximum height for the image */ 
+    }
+
+    .hero {
         height: auto;
-        overflow: hidden;
     }
+}
 
+@media (min-width: 1000px) {
     .hero img {
-      content: url('../img/work-at-home-with-pets.webp'); 
+        content: url('../img/work-at-home.webp'); 
     }
-  }
-
-  @media (min-width: 1000px) {
-    .hero img {
-      content: url('../img/work-at-home.webp'); 
-    }
-  }
+}
